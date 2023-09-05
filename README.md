@@ -6,13 +6,13 @@
 git clone https://github.com/olaviinha/BingImageCreator.git
 ```
 
-## Getting authentication
-### Chromium based browsers (Edge, Opera, Vivaldi, Brave)
-- Go to https://bing.com/.
+### Get authentication (`-U <cookie>`)
+- Go to https://bing.com/
 - F12 to open console
-- In the JavaScript console, type `cookieStore.get("_U").then(result => console.log(result.value))` and press enter
-- Copy the output. This is used in `--U` or `auth_cookie`.
+- Copy/paste to console: `cookieStore.get("_U").then(result => console.log(result.value))` and hit Enter.
+- Copy the output. This is used in -U
 
+### Usage
 ```
 $ python3 BingImageCreator/src/BingImageCreator.py -U <cookie> --prompt <prompt> --output-dir <dir>
 
@@ -25,8 +25,4 @@ options:
                         Output directory
 ```
 
-### Get -U <cookie>
-- Go to https://bing.com/
-- F12 to open console
-- Copy/paste to console: `cookieStore.get("_U").then(result => console.log(result.value))` and hit Enter.
-- Copy the output. This is used in -U
+
