@@ -16,7 +16,7 @@ import pkg_resources
 import regex
 import requests
 
-BING_URL = os.getenv("BING_URL", "https://www.bing.com")
+BING_URL = os.getenv("BING_URL", "https://cn.bing.com")
 # Generate random IP between range 13.104.0.0/14
 FORWARDED_IP = (
     f"13.{random.randint(104, 107)}.{random.randint(0, 255)}.{random.randint(0, 255)}"
