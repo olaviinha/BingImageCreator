@@ -106,7 +106,7 @@ class ImageGen:
             url,
             allow_redirects=False,
             data=payload,
-            timeout=200,
+            timeout=900,
         )
         # check for content waring message
         if "this prompt is being reviewed" in response.text.lower():
